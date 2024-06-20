@@ -82,18 +82,20 @@ public class OperatorPractice {
 		System.out.print("학년(숫자만) : ");
 		int gr = sc.nextInt();
 		System.out.print("반(숫자만) : ");
-		int cl = sc.nextInt();
-		
-		sc.nextInt();
-		
+		int cl = sc.nextInt();	
+		System.out.print("번(숫자만) : ");
+		int num = sc.nextInt();	
 		System.out.print("성별(M/F) : ");
+		
+		sc.nextLine();
+		
 		char gender = sc.nextLine().charAt(0);
-		System.out.println("성적(소수점 아래둘째 자리까지) : " );
+		System.out.print("성적(소수점 아래둘째 자리까지) : " );
 		double point = sc.nextDouble();
 		
 		String result = (gender == 'M'?"남학생":"여학생");
 		
-		System.out.printf("gr : %d");
+		System.out.printf("%d학년 %d반 %d번 %s %s의 성적은 %.2f이다.", gr, cl, num, name, result, point);
 		
 		
 		
@@ -101,6 +103,34 @@ public class OperatorPractice {
 		
 	}
 	
-
+	public void pratice7() {
+		
+		System.out.print("국어 : ");
+		int kor = sc.nextInt();
+		System.out.print("영어 : ");
+		int eng = sc.nextInt();
+		System.out.print("수학 : ");
+		int math = sc.nextInt();
+		
+		double avg = (double)(kor + eng + math)/3;
+		
+		String result = (kor >= 40 && eng >= 40 && math >= 40 && avg >= 60 ? "합격" : "불합격");
+				
+		System.out.println("\n합계 : " + (kor + eng + math));
+		System.out.println("평균 : " + avg);
+		System.out.println(result);
+	}
+	
+	public void practice8() {
+		
+		System.out.print("주민번호를 입력하세요 (- 포함) : ");
+		char ch = sc.nextLine().charAt(8);
+			
+		
+		String result = (ch == 1 || ch == 3 ? "남자":"여자");
+		
+		System.out.print(result);
+		
+	}
 
 }
