@@ -115,7 +115,7 @@ public class Switch {
 		
 		/*
 		 *  * 유의사항
-		 *		비교대상자는 in, char, String형만 가능 - double은 안됨
+		 *		비교대상자는 int, char, String형만 가능 - double은 안됨
 		 *		단, byte, short, char는 int로 인식되기 때문에 가능
 		 */
 		

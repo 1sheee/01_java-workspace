@@ -14,7 +14,10 @@ public class Run {
 		//cp.practice4();
 		//cp.practice5();
 		//cp.practice6();
-		cp.practice7();
+		//cp.practice7();
+		//cp.practice8(); - 개인적으로 어려웠음
+		cp.practice9();
+		
 	}
 	
 	
