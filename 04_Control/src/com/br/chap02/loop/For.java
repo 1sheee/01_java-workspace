@@ -164,26 +164,39 @@ public class For {
 		
 		public void method8() {
 			
-			// 랜덤값을 입력받아 출력
-			// 1에서부터 랜덤값(1~10) 총 합계
+			// 1에서부터 랜덤값(1~10사이 정수랜덤값)까지의 총 합계
 			/*
-			 * java.lang.Math 클래스에서 제공하는 random() 메소드 호출 = > 0.0~0.999999사이의 실수랜덤값
+			 * java.lang.Math 클래스에서 제공하는 random() 메소드 호출 => 0.0 ~ 0.999999사이의 실수랜덤값
 			 */
 			
-			int random = (int)(Math.random() * 10 +1)  ; // 1.0~10.9999 값을 얻을 수 있다. 연산처리 먼저 하기위해 math 괄호묶었음
+			//int random = Math.random(); // double형이라서 오류
+			//			  0.0 <=    < 1.0      =>  0.0 ~ 0.99999999
 			
-			System.out.print("정수(1~10) : " + random);
+			//int random = Math.random() * 10;
+			//		  	  0.0 <=    < 10.0	   =>  0.0 ~ 9.99999999
+			
+			//int random = Math.random() * 10 + 1;
+			//	  	 	  1.0 <=    < 11.0	   =>  1.0 ~ 10.99999999
+			
+			int random = (int)(Math.random() * 10 + 1);
+			//			   1 <=     < 11	   =>  1 ~ 10
+			
+			System.out.println("1~10사이의 랜덤값 : " + random);
 			
 			int sum = 0;
-			
-			for(int i = 1;i <= random;i++) {
+			for(int i=1; i<=random; i++) {
 				sum += i;
-				
-			} System.out.print("1에서부터 " + random + "까지의 총 합계 : " + sum);
+			}
+			
+			System.out.println("1에서부터 " + random + "까지의 총 합계 : " + sum);
 			
 			/*
 			 * Tip. 랜덤값 발생 범위 지정
-			 * (int)(Math.random() * 발생시킨 랜덤값의 개수 +랜덤값의 시작수 )
+			 * (int)(Math.random() * 발생시킬랜덤값갯수 + 시작수)
+			 * 
+			 * ex) 1 ~ 10 => (int)(Math.random() * 10 + 1)
+			 *    11 ~ 20 => (int)(Math.random() * 10 + 11)
+			 * 
 			 */
 //다시 봐야됨			
 			
