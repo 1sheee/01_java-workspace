@@ -9,7 +9,9 @@ public class Run {
 		
 		LoopPractice lp = new LoopPractice();
 		
-		
+		//lp.practice1();
+		//lp.practice2();	
+		lp.practice3();
 		
 
 	}
