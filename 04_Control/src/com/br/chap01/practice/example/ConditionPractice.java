@@ -176,8 +176,149 @@ public class ConditionPractice {
 			
 	}
 	
-	public void practice8() {
+//public void practice8() {
+//		
+//		System.out.print("피연산자1 입력 : ");
+//		int num1 = sc.nextInt();
+//		System.out.print("피연산자2 입력 : ");
+//		int num2 = sc.nextInt();
+//		
+//		sc.nextLine();
+//		
+//		System.out.print("연산자를 입력(+,-,*,/,%) : ");
+//		char ch = sc.nextLine().charAt(0);
+//		
+////		int a = (num1 + num2);
+////		int b = (num1 - num2);
+////		int c = (num1 * num2);
+////		int d = (num1 / num2);
+////		int e = (num1 % num2);
+//		
+//		String str = "잘못 입력하셨습니다. 프로그램을 종료합니다.";
 		
+//		int result = 0;
+						
+//		if(num1 > 0 && num2 >0) {
+//			if(ch == '+') {
+//				System.out.printf("%d %c %d = %d", num1, ch, num2, a);
+//				
+//			}else if(ch == '-') {
+//				System.out.printf("%d %c %d = %d", num1, ch, num2, b);
+//			}else if(ch == '*') {
+//				System.out.printf("%d %c %d = %d", num1, ch, num2, c);
+//			}else if(ch == '/' && num2 > 0) {
+//				System.out.printf("%d %c %d = %d", num1, ch, num2, d);
+//			}else if(ch == '%') {
+//				System.out.printf("%d %c %d = %d", num1, ch, num2, e);
+//			}
+//			
+//		}else if(num1 <= 0 || num2 <= 0) {
+//			System.out.printf("%s", str);
+//			
+//		
+//		}
+//			switch (ch) {
+//            case '+':
+//                System.out.printf("%d %c %d = %d%n", num1, ch, num2, num1 + num2);
+//                break;
+//            case '-':
+//                System.out.printf("%d %c %d = %d%n", num1, ch, num2, num1 - num2);
+//                break;
+//            case '*':
+//                System.out.printf("%d %c %d = %d%n", num1, ch, num2, num1 * num2);
+//                break;
+//            case '/':
+//                if (num2 == 0) {
+//                    System.out.printf("%s", str);
+//                } else {
+//                    System.out.printf("%d %c %d = %d%n", num1, ch, num2, num1 / num2);
+//                }
+//                break;
+//            case '%':
+//                if (num2 == 0) {
+//                    System.out.printf("%s", str);
+//                } else {
+//                    System.out.printf("%d %c %d = %d%n", num1, ch, num2, num1 % num2);
+//                }
+//                break;
+//            default:
+//                System.out.printf("%s", str);
+//        }
+//    } else {
+//        System.out.printf("%s", str);
+//		
+//		
+//		
+//		}
+//
+//			switch (ch) {
+//			case '+':
+//				result = num1 + num2;
+//				break;
+//			case '-':
+//				result = num1 - num2;
+//				break;
+//			case '*':
+//				result = num1 * num2;
+//				break;
+//			case '/':
+//				result = num1 / num2;
+//				break;
+//			case '%':
+//				result = num1 % num2;
+//				break;
+//			default:
+//				System.out.println("양수로 입력 하였으나 연산자 잘 못 입력함");
+//			}
+//
+//		} else if (num1 <= 0 || num2 <= 0) {
+//			System.out.println("양수 입력 하지 않음");
+//
+//		} else {
+//			System.out.printf("%d", result);
+//		}
+//	} - 출력 부분 다시 봐야됨
+	
+	public void practice9() {
+		
+		System.out.print("실행할 기능을 선택하세요. \n1. 메뉴 출력 \n2. 짝수/홀수 \n3. 합격/불합격 \n4. 계절 \n5. 로그인 \n6. 권한 확인 \n7. BMI \n8. 계산기");
+		System.out.print("\n선택 : ");
+		int num = sc.nextInt();
+		
+		while(true) {
+		switch(num) {
+		case 1 : System.out.println();
+			practice1();
+			break;
+		case 2 : System.out.println();
+			practice2();
+			break;
+		case 3 : System.out.println();
+			practice3();
+			break;
+		case 4 : System.out.println();
+			practice4();
+			break;
+		case 5 : System.out.println();
+			practice5();
+			break;
+		case 6 : System.out.println();
+			practice6();
+			break;	
+		case 7 : System.out.println();
+			practice7();
+			break;
+//		case 8 : System.out.println();
+//			practice8();
+//			break;
+		default:
+			System.out.println("메뉴오류, 재입력요청");
+		
+				}
+		
+		
+		}
 	}
+	}
+	
 
-}
