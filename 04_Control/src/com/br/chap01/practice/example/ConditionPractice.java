@@ -176,7 +176,7 @@ public class ConditionPractice {
 			
 	}
 	
-//public void practice8() {
+		public void practice8() {
 //		
 //		System.out.print("피연산자1 입력 : ");
 //		int num1 = sc.nextInt();
@@ -278,6 +278,37 @@ public class ConditionPractice {
 //			System.out.printf("%d", result);
 //		}
 //	} - 출력 부분 다시 봐야됨
+	
+	System.out.print("피연산자1 입력 : ");
+	int num1 = sc.nextInt();
+	System.out.print("피연산자2 입력 : ");
+	int num2 = sc.nextInt();
+	
+	sc.nextLine();
+	
+	System.out.print("연산자를 입력(+,-,*,/,%) : ");
+	char ch = sc.nextLine().charAt(0);
+	
+	if(num1 > 0 && num2 > 0) { // 두 수 모두 양수일 경우
+		
+		// 연산기호를 가지고 비교하여 결과 출력
+		int result = 0; // 연산결과를 담기 위한 변수 
+		switch(ch) {
+		case '+': result = num1 + num2; break;
+		case '-': result = num1 - num2; break;
+		case '*': result = num1 * num2; break;
+		case '/': result = num1 / num2; break;
+		case '%': result = num1 % num2; break;
+		default : System.out.println("양수로 잘 입력하긴 하였으나 연산자를 잘못입력하셨습니다."); return;
+		}
+		
+		// 결과 출력
+		System.out.printf("%d %c %d = %d", num1, ch, num2, result);
+		
+	}else { // 그게 아닐 경우 
+		System.out.println("양수가 아닌 값을 입력하셨습니다.");
+	}
+		}
 	
 	public void practice9() {
 		
