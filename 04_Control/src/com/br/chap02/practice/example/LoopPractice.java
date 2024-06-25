@@ -48,7 +48,7 @@ public class LoopPractice {
 		int num = sc.nextInt();
 
 		if (num > 0) {
-			for (int i = 1; i <= num; i++) {
+			for (int i = num; i >= 1; --i) {
 				System.out.print(i + " ");
 			}
 
@@ -58,5 +58,34 @@ public class LoopPractice {
 		}
 
 	}
+	
+	public void practice4() {
+		
+	}
+	public void practice5() {
+		
+	}
+	public void practice6() {
+		
+	}
+	public void practice7(){
+		
+	}
+	public void practice8() {
+		
+	}
+	public void practice9() {
+		
+	}
+	public void practice10() {
+	
+	}
+	public void practice11() {
+		
+	}
+	public void practice12() {
+		
+	}
 }
+
 
