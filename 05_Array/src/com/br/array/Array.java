@@ -366,16 +366,81 @@ public class Array { Scanner sc = new Scanner(System.in);
 		 *	4. 배열에 담긴 값 전체 출력
 		 */
 		
-		System.out.print("문자열을 입력하세요: ");
+		System.out.print("문자열을 입력하세요 : ");
 		String str = sc.nextLine();
 		
 		char [] arr = new char [str.length()];
 		
-		int sum = 0;
-		for(int i = 0;i < str.length();i++) {
-			System.out.println(i);
+		for(int i = 0;i < str.length();i++) { //arr.length()도 써도 된다.
+			arr[i] = str.charAt(i);
+
+		}for(int i = 0;i < str.length();i++) {
+			System.out.println(arr[i]);
 		}
 		
 		
 	}//10e
+	
+		public void method11(){//11s
+			/*
+			 * 사용자에게 문자열 입력 받아
+			 * 이때 각 문자마다 +1이 진행된 문자열을 얻고싶다.
+			 * ex) "AAP" (입력) => "BBQ" (출력)
+			 * 		"GDKKN" (입력) => "HELLO" (출력)
+			 * 
+			 * 		해당 출력할 결과값을 String result에 기록한 후 출력하시오.
+			 */
+			
+			// 1. 사용자에게 문자열 입력받기
+			// 2. 문자열의 글자수만큼 문자를 보관할 char 배열 생성
+			// 3. char배열의 각 인덱스 자리에 문자열로부터 추출된 문자값의 그 다음문자값을 대입
+			// 4. char배열에 대입되어 있는 각 문자들을 문자열로 연이어줌
+			// 5. result 출력
+			
+			System.out.print("문자열을 입력하세요 : ");
+			String str = sc.nextLine();
+			
+			char [] arr = new char [str.length()];
+						
+			for(int i = 0;i < str.length();i++) {
+				arr[i] = (char)(str.charAt(i) + 1); // 타입이 안 맞으면 같게 맞춰준다 문자+1은 int형이니
+			}
+			/*
+			String result = "";
+			*/
+//			for(int i = 0;i < str.length();i++) {
+//			
+//				
+//			}
+			String result = String.valueOf(arr);
+			
+			// String.valueOf(문자열화 시키고자 하는 값); : 전달된 값을 가지고 문자열로 만들어 반환해주는 메소드
+			System.out.println(result);		
+			
+			
+		}//11e
+		
+		public void method12() {
+			/*
+			 * < 배열 선언과 동시에 초기화 >
+			 * 배열 생성과 동시에 각 인덱스에 초기값 대입하는 과정
+			 * 
+			 * [표현법]
+			 * 자료형[] 배열명 = new 자료형[]{}; 	- 방법1
+			 * 자료형[] 배열명 = new {값1, 값2..};  - 방법2
+			 * 
+			 */
+			
+			int arr1 [] = new int[] {1, 2, 3, 4};
+			int arr2 [] = {1, 2, 3, 4};
+			
+			//	배열을 먼저 선언 한 후에 초기화를 진행하고자 한다면 반드시 방법1을 이용
+			int[] arr;
+			//arr = {1, 2, 3, 4};
+			arr = new int[]{1, 2, 3, 4}; 
+			
+			System.out.println(arr1 == arr2); // false
+			// 각 변수에 담겨있는 주소값을 가지고 비교하기 때문에 false
+			
+		}
 }

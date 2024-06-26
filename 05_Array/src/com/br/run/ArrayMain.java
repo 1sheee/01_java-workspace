@@ -17,7 +17,16 @@ public class ArrayMain {
 		//arr.method8();
 		//arr.method9();
 		//arr.method10();
-		arr.method10();
+		//arr.method10();
+		//arr.method11();
+		//arr.method12();
+		
+		ArrayCopy ac = new ArrayCopy();
+		//ac.method1();
+		//ac.method2();
+		//ac.method3();
+		//ac.method4();
+		ac.method5();
 	}
 
 }
