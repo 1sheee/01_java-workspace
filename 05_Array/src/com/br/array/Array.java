@@ -443,4 +443,37 @@ public class Array { Scanner sc = new Scanner(System.in);
 			// 각 변수에 담겨있는 주소값을 가지고 비교하기 때문에 false
 			
 		}
+		public void advancedFor() {
+			
+			int[] arr = {1,2,3,4,5};
+			
+			//	for loop문
+			for(int i = 0; i<arr.length;i++) {
+				System.out.println(arr[i]);
+			}
+			System.out.println("-----------");
+			
+			// advanced for문 (향상된 for문)
+			/*
+			 * for(변수 : 순회하고자 하는 배열||컬렉션){
+			 * 
+			 * }
+			 * 반복문이 돌때마다 매번 앞쪽 변수에는
+			 * 각 인덱스에 담겨있는 실제 데이터값이 매번 담김
+			 * 
+			 */
+			int index = 0; // 추가적인 변수를 입력해야됨
+			for(int value : arr) { // 변수 = arr[0]; => 변수 = arr[1];...=>arr[마지막];
+				System.out.println(index++ + "번째" + value);
+				//index++;
+			}
+			// 모든 인덱스에 순차적으로 접근하고자 할 때 사용
+			
+			/*
+			 * for(int:int[])
+			 * for(char:char[])
+			 * for(String:String[])
+			 * 
+			 */
+		}
 }
