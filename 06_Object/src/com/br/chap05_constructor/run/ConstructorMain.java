@@ -1,5 +1,6 @@
 package com.br.chap05_constructor.run;
 
+import com.br.chap05_constructor.model.vo.Cosmetic;
 import com.br.chap05_constructor.model.vo.User;
 
 public class ConstructorMain {
@@ -31,6 +32,14 @@ public class ConstructorMain {
 	// 실행 할 코드 => setter메소드를 호출해서 값 변경
 	u3.setUserPwd("1234");
 	System.out.println(u3.information());
+	
+	System.out.println("==========================");
+	
+	Cosmetic cos = new Cosmetic("스킨", 15000, "설화수", "기초");
+	System.out.println(cos.information());
+	
+	
+	
 	}
 
 }
