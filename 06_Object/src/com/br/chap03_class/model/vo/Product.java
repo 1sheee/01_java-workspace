@@ -6,6 +6,18 @@ public class Product {
 	private int price;
 	private String brand;
 	
+	public Product() {
+		
+	}
+	
+	public Product(String pName, int price, String brand) {
+		this.pName = pName;
+		this.price = price;
+		this.brand = brand;
+	}
+		
+	
+	
 	public void setpName(String pName) {
 		this.pName = pName;
 	}
@@ -33,4 +45,8 @@ public class Product {
 	return "pName : " + pName + " price : " + price  + " brand : " + brand;
 	
 	}
+	
+	
+	
+	
 }

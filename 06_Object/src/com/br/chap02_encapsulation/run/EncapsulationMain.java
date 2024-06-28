@@ -38,6 +38,9 @@ public class EncapsulationMain {
 		System.out.println(hong.getHeight());
 		System.out.println(hong.getKorScore());
 		System.out.println(hong.getMathScore());
+		
+		Student st = new Student("닭", 20, 19, 80, 100);
+		System.out.println(st.information());
 	}
 
 }

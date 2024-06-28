@@ -24,6 +24,26 @@ public class Student {
 	 *  2. 생성자
 	 *  
 	 */
+	// 기본생성자
+	
+	//이름, 나이, 키 초기화 대입해주는 매개변수 생성자
+	
+	//이름, 나이 키, 국어, 수학, 대입해주는 매개변수
+	
+	public Student() {}
+	
+	public Student(String name, int age, double height) {
+		this.name = name;
+		this.age = age;
+		this.height = height;
+	}
+	
+	public Student(String name, int age, double height, int korScore, int mathScore) {
+		this(name, age, height); // 위 세개짜리 생성
+		this.korScore = korScore;
+		this.mathScore = mathScore;
+	}
+	
 	
 	/*
 	 *  3. 메소드 | 멤버메소드
@@ -98,5 +118,9 @@ public class Student {
 	
 	public int getMathScore() {
 		return mathScore;
+	}
+	
+	public String information() {
+		return "이름 : " + name + ", 나이 : " + age + ", 키 : " + height + ", 국어 : " + korScore + ", 수학 : " + mathScore;
 	}
 }
