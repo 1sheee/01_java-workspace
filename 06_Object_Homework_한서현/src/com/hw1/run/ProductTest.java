@@ -15,20 +15,25 @@ public class ProductTest {
 		System.out.println(p3.information());
 		
 		System.out.println("==================================================");
-					
-		Product p4 = new Product("ssgnote9","갤럭시노트9","경기도 수원",1200000,0.05);
-		System.out.println(p4.information());
-		Product p5 = new Product("1gcnote5","LG스마트폰5","경기도 평택",1200000,0.05);
-		System.out.println(p5.information());
-		Product p6 = new Product("ktsnote3","KT스마트폰3","서울시 강남",1200000,0.05);
-		System.out.println(p6.information());
+		
+		p1.setPrice(1200000);
+		p1.setTax(0.05);
+		p2.setPrice(1200000);
+		p2.setTax(0.05);
+		p3.setPrice(1200000);
+		p3.setTax(0.05);
+		
+		System.out.println(p1.information());
+		System.out.println(p2.information());
+		System.out.println(p3.information());
 		
 		System.out.println("==================================================");
 		
-		System.out.println("상품명 = " + p4.ProductName() + "\n부가세 포함 가격 = " + (p4.Price() + (int)(p4.Price()*p4.Tax()))+ "원");
-		System.out.println("상품명 = " + p5.ProductName() + "\n부가세 포함 가격 = " + (p5.Price() + (int)(p5.Price()*p4.Tax()))+ "원");
-		System.out.println("상품명 = " + p6.ProductName() + "\n부가세 포함 가격 = " + (p6.Price() + (int)(p6.Price()*p4.Tax()))+ "원");
+		System.out.println("상품명 = " + p1.ProductName() + "\n부가세 포함 가격 = " + (p1.Price() + (int)(p1.Price()*p1.Tax()) + "원"));
+		System.out.println("상품명 = " + p2.ProductName() + "\n부가세 포함 가격 = " + (p1.Price() + (int)(p1.Price()*p1.Tax()) + "원"));
+		System.out.println("상품명 = " + p3.ProductName() + "\n부가세 포함 가격 = " + (p1.Price() + (int)(p1.Price()*p1.Tax()) + "원"));
 		
+	
 	}
 
 }

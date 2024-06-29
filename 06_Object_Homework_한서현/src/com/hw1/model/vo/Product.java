@@ -17,6 +17,25 @@ public class Product {
 		this.price = price;
 		this.tax = tax;
 		}
+	
+	
+	public void setProducid(String productid) {
+		this.productid = productid;
+	}
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+	public void setArea(String Area) {
+		this.Area = Area;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public void setTax(double tax) {
+		this.tax = tax;
+	}
+	
+	
 	public String Producid() {
 		return productid;
 	}
