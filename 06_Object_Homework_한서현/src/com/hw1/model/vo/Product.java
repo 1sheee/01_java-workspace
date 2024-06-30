@@ -2,16 +2,16 @@ package com.hw1.model.vo;
 
 public class Product {
 
-	private String productid;
+	private String productId;
 	private String productName;
 	private String Area;
 	private int price;
 	private double tax;
 	
 	public Product() {}
-	public Product(String producid, String productName, String Area
+	public Product(String productId, String productName, String Area
 			, int price, double tax) {
-		this.productid = producid;
+		this.productId = productId;
 		this.productName = productName;
 		this.Area = Area;
 		this.price = price;
@@ -19,8 +19,8 @@ public class Product {
 		}
 	
 	
-	public void setProducid(String productid) {
-		this.productid = productid;
+	public void setProductid(String productId) {
+		this.productId = productId;
 	}
 	public void setProductName(String productName) {
 		this.productName = productName;
@@ -36,8 +36,8 @@ public class Product {
 	}
 	
 	
-	public String Producid() {
-		return productid;
+	public String Productid() {
+		return productId;
 	}
 	public String ProductName() {
 		return productName;
@@ -52,7 +52,7 @@ public class Product {
 		return tax;
 	}
 	public String information() {
-		return productid + " " + productName + " " + Area + " " + price +" " + tax;
+		return productId + " " + productName + " " + Area + " " + price +" " + tax;
 	}
 	
 	
