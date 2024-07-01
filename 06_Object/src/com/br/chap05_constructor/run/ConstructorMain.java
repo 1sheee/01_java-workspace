@@ -35,9 +35,18 @@ public class ConstructorMain {
 	
 	System.out.println("==========================");
 	
-	Cosmetic cos = new Cosmetic("스킨", 15000, "설화수", "기초");
+	//String[] ingredient = {"알코올", "정제수", "색소"};
+	//Cosmetic cos = new Cosmetic("스킨", 15000, "설화수", "기초", ingredient);
+	
+	Cosmetic cos = new Cosmetic("스킨", 15000, "설화수", "기초", new String[]{"알코올", "정제수", "색소"});
+	
 	System.out.println(cos.information());
 	
+	System.out.println("==========================");
+	
+	u3.setCos(cos);
+	
+	System.out.println(u3.information());
 	
 	
 	}

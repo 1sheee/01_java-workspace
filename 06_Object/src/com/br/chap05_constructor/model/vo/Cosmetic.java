@@ -71,15 +71,26 @@ public class Cosmetic {
 	private String brand;
 	private String category;
 	
+	// 참조자료형의 필드도 둘 수 있다.
+	private String [] ingredient;
+	
+	
+	
+	
+	
+	
+	
+	
 	public Cosmetic() {
 		
 	}
 	
-	public Cosmetic(String cName, int price, String brand, String category) {
+	public Cosmetic(String cName, int price, String brand, String category, String[] ingredient) {
 		this.cName = cName;
 		this.price = price;
 		this.brand = brand;
 		this.category = category;
+		this.ingredient = ingredient;
 	}
 	
 	
@@ -94,6 +105,14 @@ public class Cosmetic {
 	}
 	public String getCategory() {
 		return category;
+	}
+	
+	public String[] getIngredient() {
+		return ingredient; // 주소값 반환
+	}
+	
+	public void setIngredient(String[] ingredient) {
+		this.ingredient = ingredient;
 	}
 	
 	public void setcName(String cName) {
@@ -112,7 +131,15 @@ public class Cosmetic {
 	
 	public String information() {
 		String str = "상품명 : " + cName +  ", 가격 : " + price  +
-				 ", 브랜드명 : " + brand  + ", 카테고리 : " + category;
+				 ", 브랜드명 : " + brand  + ", 카테고리 : " + category +
+				 ", 성분 : ";
+		
+		for(int i=0;i<ingredient.length;i++) {
+			str += ingredient[i];
+			if(i < ingredient.length -1)
+				str += ", ";
+		}
+		
 		return str;
 	}
 	
