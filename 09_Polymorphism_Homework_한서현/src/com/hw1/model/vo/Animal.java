@@ -6,9 +6,9 @@ public abstract class Animal {
 	private String name;
 	private String kinds;
 	
-	public Animal() {}
+	protected Animal() {}
 
-	public Animal(String name, String kinds) {
+	protected Animal(String name, String kinds) {
 		super();
 		this.name = name;
 		this.kinds = kinds;
@@ -32,7 +32,7 @@ public abstract class Animal {
 
 	@Override
 	public String toString() {
-		return "저의 이름은" + name + "이고, 종류는 " + kinds + "입니다.";
+		return "저의 이름은 " + name + "이고, 종류는 " + kinds + "입니다.";
 	}
 	
 	public abstract void speak(); //추상메소드로 구현
