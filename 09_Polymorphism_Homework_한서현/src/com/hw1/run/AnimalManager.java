@@ -14,7 +14,7 @@ public class AnimalManager {
 		ani[1] = new Cat("고사리","러시안블루","집","코발트블루");
 		ani[2] = new Cat("다이진","잡것","집","흰색");
 		ani[3] = new Dog("왕바우","잡것",30);
-		ani[4] = new Dog("도리","난나요",85);
+		ani[4] = new Dog("도리","셰퍼드",85);
 		
 		
 		// 각 인덱스별로 무작위 Dog, Cat 클래스를 이용하여 객체 생성
