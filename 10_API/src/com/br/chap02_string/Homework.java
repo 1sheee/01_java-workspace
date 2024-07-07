@@ -22,9 +22,19 @@ public class Homework {
 		// 모든 맛집에 대한 정보를 Shop[] 로 담아내기
 		// Hint. 먼저 \n 분리하고 => 반복문으로 접근하면서 다시 ,로 분리해야됨
 		
-		
 		Shop[] sh = new Shop[10];
-		sh[0] = new Shop("1번",)
+		
+		String[] str1 = shopCsv.split("\n");	
+		
+		for(int i=0;i<str1.length;i++) {
+			String[] str2 = str1[i].split(",");
+			sh[i] = new Shop(str2[0], str2[1], str2[2], str2[3], str2[4], str2[5]);
+			
+		}
+		for(int i=0;i<str1.length;i++) {
+			System.out.println(sh[i]);
+		}
+		
 		
 
 		
