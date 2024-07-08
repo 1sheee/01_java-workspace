@@ -21,13 +21,14 @@ public class Homework {
 		// 위의 shopCsv 문자열을 적절하게 분리해서 
 		// 모든 맛집에 대한 정보를 Shop[] 로 담아내기
 		// Hint. 먼저 \n 분리하고 => 반복문으로 접근하면서 다시 ,로 분리해야됨
+				
 		
-		Shop[] sh = new Shop[10];
+		String[] str1 = shopCsv.split("\n"); // {한줄단위로 표현 된다.}	
 		
-		String[] str1 = shopCsv.split("\n");	
+		Shop[] sh = new Shop[10]; // Shop[] sh = new Shop[str1.length];
 		
-		for(int i=0;i<str1.length;i++) {
-			String[] str2 = str1[i].split(",");
+		for(int i=0;i<str1.length;i++) { // shops[i] == "맛집정보"
+			String[] str2 = str1[i].split(","); //"1","맘스쿡"..}
 			sh[i] = new Shop(str2[0], str2[1], str2[2], str2[3], str2[4], str2[5]);
 			
 		}
