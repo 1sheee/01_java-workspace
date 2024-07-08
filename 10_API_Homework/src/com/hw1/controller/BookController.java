@@ -52,10 +52,16 @@ public class BookController {
 		// 코드 작성
 		
 		Calendar publishDate = Calendar.getInstance();
+		
 		String[] nd1 = newDate.split("-");
-		String year = String.valueOf(publishDate);
-		String month = String.valueOf(publishDate);
-		String date = String.valueOf(publishDate);
+		
+//		String year = String.valueOf(publishDate);
+//		String month = String.valueOf(publishDate);
+//		String date = String.valueOf(publishDate);
+		
+		String year = nd1[0];
+		String month = nd1[1];
+		String date = nd1[2];
 		
 		
 		
@@ -78,7 +84,7 @@ public class BookController {
 		
 		// 코드 작성
 		SimpleDateFormat publishDate = new SimpleDateFormat("yyyy년 MM월 dd일");
-		String pbdate = publishDate.format(new Date()) ;
+		String pbdate = publishDate.format(new Date());
 		System.out.println(pbdate + " 출간");
 		
 	}
@@ -92,9 +98,9 @@ public class BookController {
 		
 		// 코드 작성
 		
-		
-		for(String book : ) {
-			if(book.contains(searchTitle)) {
+		//  배열의요소	배열 순회 공간
+		for(Book book : list) {
+			if(book.getTitle().contains(searchTitle)) {
 				System.out.println(book);
 			}
 		}
