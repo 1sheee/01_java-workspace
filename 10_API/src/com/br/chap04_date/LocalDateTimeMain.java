@@ -1,7 +1,9 @@
 package com.br.chap04_date;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class LocalDateTimeMain {
 
@@ -42,14 +44,26 @@ public class LocalDateTimeMain {
 		System.out.println(time2); // 나노초가 0일 경우 아래구문이 출력 안된다.
 		
 		System.out.println("================");
+		System.out.println("//5교시////////////////////////////////////////////////////////////////////////////////");
 		
+		// * LocalDateTime ---------------------------------
+		LocalDateTime dateTime1 = LocalDateTime.now();
+		System.out.println(dateTime1.toString());
 		
+		LocalDateTime dateTime2 = LocalDateTime.of(2024, 12, 11, 13, 0);
+		System.out.println(dateTime2);
 		
+		LocalDateTime dateTime3 = LocalDateTime.of(date2, time2);
+		System.out.println(dateTime3);
 		
+		System.out.println("================");
 		
+		// * LocalDateTime 객체를 원하는 형식으로 반영시켜서 출력
+		// 	=> java.time.format.DateTimeFormatter
 		
-		
-		
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy년 MM월 dd일 E요일 hh(HH)시 mm분 ss초");
+		String str = dtf.format(dateTime3);
+		System.out.println(str);
 		
 		
 		
