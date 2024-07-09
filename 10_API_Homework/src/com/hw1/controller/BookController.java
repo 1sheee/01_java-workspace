@@ -26,9 +26,22 @@ public class BookController {
 		
 		// list에 담긴 전체 Book객체의 정보 출력하는 구문 작성하시오.
 		
-		for(int i=0; i < list.length-1; i++) {
-			System.out.println(list[i]);
-			
+//		for(int i=0; i < list.length-1; i++) {
+//			System.out.println(list[i]);
+//			
+//		}
+		
+//		for(int i=0; i < list.length-1; i++) {
+//			if(list[i] != null) {
+//				System.out.println(list[i]);
+//			}
+//		}
+		
+		// 2) for each문 (향상된 for문)
+		for(Book bk : list) {
+			if(bk != null) {
+				System.out.println(bk);
+			}
 		}
 		
 	}
@@ -51,18 +64,23 @@ public class BookController {
 	
 		// 코드 작성
 		
-		Calendar publishDate = Calendar.getInstance();
-		
-		String[] nd1 = newDate.split("-");
-		
+//		Calendar publishDate = Calendar.getInstance(); 오답
+//		
+//		String[] nd1 = newDate.split("-");
+//		
 //		String year = String.valueOf(publishDate);
 //		String month = String.valueOf(publishDate);
 //		String date = String.valueOf(publishDate);
+//		
+//		String year = nd1[0];
+//		String month = nd1[1];
+//		String date = nd1[2];				
 		
-		String year = nd1[0];
-		String month = nd1[1];
-		String date = nd1[2];
-		
+		String[] dateArr = newDate.split("-"); // {"특정년도", "특정월", "특정일"}
+		int year = Integer.parseInt(dateArr[0]);
+		int month = Integer.parseInt(dateArr[1]);
+		int date = Integer.parseInt(dateArr[2]);
+		Calendar publishDate = new GregorianCalendar(year, month-1, date);
 		
 		
 		// ------------------------------------------------------
@@ -83,9 +101,9 @@ public class BookController {
 		// SimpleDateFormat 이용해서
 		
 		// 코드 작성
-		SimpleDateFormat publishDate = new SimpleDateFormat("yyyy년 MM월 dd일");
-		String pbdate = publishDate.format(new Date());
-		System.out.println(pbdate + " 출간");
+		SimpleDateFormat  sdf = new SimpleDateFormat("yyyy년 MM월 dd일");
+		String result = sdf.format(list[4].getPublishDate().getTimeInMillis());
+		System.out.println(result + " 출간");
 		
 	}
 	

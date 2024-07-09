@@ -75,11 +75,14 @@ public class Book {
 		
 		// 코드 작성
 		
-		SimpleDateFormat publishDate = new SimpleDateFormat("yyyy년 MM월 dd일");
-		String pbdate = publishDate.format(new Date()) ;
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일");
+		//String pbdate = publishDate.format(new Date()) ; 
+		String result = sdf.format(publishDate.getTimeInMillis()); // "2022년 12월 01일"
 		
 		return "Book [title=" + title + ", author=" + author + ", publisher=" + publisher + ", publishDate="
-				+ pbdate + ", price=" + price + "]";
+				+ result + ", price=" + price + "]";
+		
+		
 	}
 
 }
