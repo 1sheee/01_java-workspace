@@ -17,8 +17,7 @@ public class FileDao {
 			bw = new BufferedWriter(new FileWriter(fileName +".txt"));
 			
 			bw.write(content);
-			bw.write(content);
-			bw.write(content);
+
 			
 			
 

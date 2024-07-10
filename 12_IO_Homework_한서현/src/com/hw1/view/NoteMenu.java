@@ -20,10 +20,43 @@ public class NoteMenu {
 			System.out.print("번호를 입력하세요 : ");
 			int num = sc.nextInt();
 			
-			switch(num) {
-			
+			switch(num) {//switch s
+			case 1: 
+				createNote();
+				break;
+			case 2:
+				openNote();
+				break;
+			case 3:
+				editNote();
+				break;
+			case 4:
+				System.out.println("프로그램을 종료합니다.");
+			default
+				System.out.println("잘 못 입력하셨습니다.");										
+				
+			}//switch e
 			
 			}
+			
+			
+		}
+		
+		public void createNote() {
+			System.out.println("파일에 저장할 내용을 입력하시오 (exit을 입력하면 내용입력 끝");
+			StringBuilder sb = new StringBuilder();
+			while(true) {
+				String content = sc.nextLine();
+				if(content.equalsIgnoreCase("exit")) {
+					sb.append(content);
+					sb.append("\n");
+					
+				}else if(content.equals("exit")) {
+					break;
+				}
+				
+			}
+			
 			
 			
 		}
@@ -33,4 +66,4 @@ public class NoteMenu {
 	}
 	
 
-}
+
