@@ -9,64 +9,44 @@ import java.io.IOException;
 
 public class FileDao {
 	
-	public void fileSave(String content, String fileName) {		
-		
-		BufferedWriter bw = null;
-		
-		try {
-			bw = new BufferedWriter(new FileWriter(fileName +".txt"));
+	public void fileSave(String content, String fileName) {
+
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter(fileName + ".txt"))) {
 			
 			bw.write(content);
 
-			
-			
-
-			
-			
 		} catch (IOException e) {
+			
 			e.printStackTrace();
-		} finally {
-			try {
-				bw.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
 		}
-		
-		
-		
-	}
-	
-	
+
+	}	
 	
 	public void fileOpne(String fileName) {
 				
-		
-		try {
-			BufferedReader br = new BufferedReader(new FileReader(fileName +".txt"));
-		
-		System.out.println(br.readLine());
-		
-		String value = null;
 		StringBuilder sb = new StringBuilder();
-		while((value = br.readLine()) != null){
-			sb.append(value);
+		
+		try (BufferedReader br = new BufferedReader(new FileReader(fileName +".txt"))){
+		
+		String content = null;
+		
+		while((content = br.readLine()) != null){
+			sb.append(content);
 			sb.append("\n");
-			if((value = br.readLine()) == null){
+			if((content = br.readLine()) == null){
 				System.out.println("null");
 			}
 		}
-		
-		String result = sb.toString();
-		System.out.println(result);
-		
-		
+				
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		String result = sb.toString();
+		
+		}
 		
 	}
 
-}
+
