@@ -118,7 +118,7 @@ public class FileByteDao {
 			int value = 0;
 			while((value=fin.read()) != -1) {
 				System.out.print((char)value);
-			}									
+			}								// 문자값으로 보고싶으면			
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
