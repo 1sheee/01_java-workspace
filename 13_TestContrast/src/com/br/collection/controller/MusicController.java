@@ -27,10 +27,10 @@ public class MusicController {
 	public int deleteMusic(String title) {
 		int result = 0;
 		for(int i =0; i<list.size(); i++) {
-			if(list.get(i).getTitle().replace(" ","").equals(title.replace(" ", ""))) {
+			if(list.get(i).getTitle().equals(title)) {
 				list.remove(i);
 				result++;
-				//break;
+				break;
 			}
 		}
 		return result;
@@ -59,12 +59,12 @@ public class MusicController {
 		return result;
 	}
 	
-	public List<String> gasusearch(String artist){
+	public List<String> gasusearch(String artist){ // 가수명으로 곡가져오기
 		List<String> search2 = new ArrayList<>();
 		for(int i = 0; i < list.size() ; i++) {
 			if(list.get(i).getArtist().equals(artist)) {
 				search2.add(list.get(i).getTitle());
-				
+				break;
 			}
 			
 		}
@@ -75,7 +75,7 @@ public class MusicController {
 	public int countgok(String title) {
 		int count = 0;
 		for(int i = 0; i < list.size() ; i++) {
-			if(list.get(i).getTitle().contains(title)) {
+			if(list.get(i).getTitle().replace(" ","").contains(title.replace(" ",""))) {
 				count++;
 			}
 		}
