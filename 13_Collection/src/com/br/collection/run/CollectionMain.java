@@ -10,8 +10,13 @@ public class CollectionMain {
 		ListController lc = new ListController();
 		//lc.arrayListTest1();
 		//lc.arrayListTest2();
-		lc.arrayListTest3();
-		
+		//lc.arrayListTest3();
+		//lc.arrayListTest4();
+		//lc.arrayListTest5();
+		//lc.arrayListTest6();
+		lc.arrayListTest7();
+	
+	
 	}
 	
 	
