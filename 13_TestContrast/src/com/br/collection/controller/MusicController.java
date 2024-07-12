@@ -18,7 +18,8 @@ public class MusicController {
 	public void input(String title, String artist) {
 		list.add(new Music(title,artist));
 		
-	}
+	}	
+	
 	
 	public List<Music> selectmusic(){
 		return list;
