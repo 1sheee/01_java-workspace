@@ -189,7 +189,7 @@ public class ListController {//s
 		for(int i=0 ; i<list.size(); i++) {
 			System.out.println(list.get(i));
 		}
-		System.out.println("==== for each문 ====");
+		System.out.println("==== for each문 ===="); // 조회할 때 만!
 		for(Music lst : list) {
 			System.out.println(lst);
 		}
